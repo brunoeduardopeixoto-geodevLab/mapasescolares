@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Projeto de mapas e produtos cartográficos para a rede municipal de ensino de Nova Lima, desenvolvido no âmbito do TCC em Geografia da UFMG em parceria com o DPGEO/SEMPU.">
+<meta name="author" content="Bruno Eduardo Teixeira Peixoto">
+<title>Mapas Escolares de Nova Lima | Projeto Cartográfico</title>
+<style>
+:root{--bg:#f5f7f4;--paper:#fff;--ink:#1f2b25;--muted:#607068;--line:#d8e1db;--green:#1e5c45;--green2:#2d765a;--gold:#b18a4a;--soft:#eef3ef;--shadow:0 14px 38px rgba(30,55,42,.08);--r:20px;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fafcf9 0,var(--bg) 100%);line-height:1.65}a{color:var(--green2);overflow-wrap:anywhere}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:#111;color:#fff;padding:.7rem 1rem;z-index:100}
+header{position:sticky;top:0;z-index:40;background:rgba(250,252,249,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:var(--max);margin:auto;padding:.8rem 1.2rem;display:flex;gap:1rem;align-items:center}.brand{font-weight:800;text-decoration:none;color:var(--green);white-space:nowrap}.links{margin-left:auto;display:flex;gap:.3rem;overflow:auto}.links a{text-decoration:none;color:var(--muted);padding:.45rem .65rem;border-radius:999px;white-space:nowrap;font-size:.9rem}.links a:hover{background:var(--soft);color:var(--green)}
+.hero{max-width:var(--max);margin:auto;padding:4.5rem 1.2rem 2.2rem;display:grid;grid-template-columns:1.45fr .55fr;gap:1.2rem}.hero-main{background:linear-gradient(135deg,#173f31,#2a6d52 65%,#3b7a65);color:#fff;border-radius:30px;padding:clamp(2rem,5vw,4.3rem);box-shadow:var(--shadow)}.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:800;color:#d9eadf}.hero h1{font-size:clamp(2.35rem,6vw,5rem);line-height:1.02;letter-spacing:-.05em;max-width:13ch;margin:.7rem 0 1.2rem}.hero-main p{color:#eaf2ed;max-width:60ch;font-size:1.05rem}.hero-card{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:1.5rem;box-shadow:var(--shadow)}.hero-card h2{margin:0 0 .8rem;color:var(--green)}.meta{display:grid;gap:.9rem}.meta div{border-top:1px solid var(--line);padding-top:.8rem}.meta strong{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em}.meta span{color:var(--muted)}
+main{max-width:var(--max);margin:auto;padding:0 1.2rem 4rem}.section{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.4rem,3vw,2.5rem);margin-top:1rem;box-shadow:var(--shadow);scroll-margin-top:5.5rem}.head{border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:1.3rem}.eyebrow{color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.section h2{margin:.2rem 0 0;font-size:clamp(1.65rem,3vw,2.45rem);line-height:1.1;letter-spacing:-.03em}.prose{max-width:82ch}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}.card{border:1px solid var(--line);border-radius:16px;padding:1rem;background:linear-gradient(#fff,#f7f9f7)}.card b{display:block;color:var(--muted);font-size:.79rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem}.callout{border-left:4px solid var(--gold);background:#fbf8f0;padding:1rem 1.1rem;border-radius:12px;color:#544630;margin-top:1rem}.refs{display:grid;gap:.8rem}.ref{border:1px solid var(--line);border-radius:15px;padding:1rem;background:#fff;overflow-wrap:anywhere}.ref strong{color:var(--green)}.ref em{font-style:italic}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.art{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.art img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#e9eee9;border-bottom:1px solid var(--line)}.art .body{padding:1rem;display:flex;flex-direction:column;gap:.5rem;height:100%}.art h3{margin:0;font-size:1.05rem;line-height:1.2}.art p{margin:0;color:var(--muted);font-size:.92rem}.art a{margin-top:auto;font-size:.87rem}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.tech{background:#173f31;color:#fff;border-radius:20px;padding:1.4rem}.tech dl{margin:0;display:grid;grid-template-columns:minmax(180px,.7fr) 1.3fr;gap:.7rem 1rem}.tech dt{font-weight:700;color:#cfe0d5}.tech dd{margin:0}
+footer{background:#eef2ed;border-top:1px solid var(--line);color:var(--muted);padding:1.7rem 1.2rem}.foot{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:950px){.hero{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:repeat(2,1fr)}.twocol{grid-template-columns:1fr}}
+@media(max-width:680px){.nav{align-items:flex-start;flex-direction:column}.links{margin-left:0;width:100%}.hero{padding-top:2rem}.grid,.gallery{grid-template-columns:1fr}.tech dl{grid-template-columns:1fr}.hero-main,.hero-card{border-radius:22px}}
+@media print{header{display:none}body{background:#fff}.hero{padding-top:0}.section,.hero-main,.hero-card{box-shadow:none}a{color:inherit;text-decoration:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header>
+<nav class="nav" aria-label="Navegação principal">
+<a class="brand" href="#topo">Mapas Escolares • Nova Lima</a>
+<div class="links">
+<a href="#identificacao">Projeto</a><a href="#contexto">Contexto</a><a href="#creditos">Créditos</a><a href="#historicas">Históricas</a><a href="#cartograficas">Cartográficas</a><a href="#iconografia">Iconografia</a><a href="#acervos">Acervos</a><a href="#ficha">Ficha técnica</a>
+</div>
+</nav>
+</header>
+
+<div id="topo" class="hero">
+<section class="hero-main" aria-labelledby="titulo">
+<div class="kicker">UFMG • IGC • Prefeitura de Nova Lima • DPGEO/SEMPU</div>
+<h1 id="titulo">Mapas e produtos cartográficos para a rede municipal de ensino</h1>
+<p>Projeto desenvolvido no município de Nova Lima, Minas Gerais, como parte do Trabalho de Conclusão de Curso em Geografia pela Universidade Federal de Minas Gerais. A proposta articula cartografia escolar, geoprocessamento, história territorial e produção de materiais didáticos.</p>
+</section>
+<aside class="hero-card">
+<h2>Ficha de identificação</h2>
+<div class="meta">
+<div><strong>Autor</strong><span>Bruno Eduardo Teixeira Peixoto</span></div>
+<div><strong>Vínculo</strong><span>Curso de Geografia — Instituto de Geociências da UFMG</span></div>
+<div><strong>Natureza</strong><span>Produto cartográfico e documental vinculado ao desenvolvimento do TCC</span></div>
+<div><strong>Parceria</strong><span>IGC/UFMG e DPGEO/SEMPU — Prefeitura de Nova Lima</span></div>
+<div><strong>Ano</strong><span>2026</span></div>
+</div>
+</aside>
+</div>
+
+<main id="conteudo">
+<section id="identificacao" class="section">
+<div class="head"><div class="eyebrow">Seção 01</div><h2>Identificação do projeto</h2></div>
+<div class="prose"><p>Este site organiza os créditos acadêmicos e institucionais, as bases históricas e geográficas e as fontes iconográficas utilizadas no desenvolvimento do produto cartográfico dedicado à Estrada Real e à sua relação com Nova Lima e o contexto regional de Minas Gerais. O material integra o desenvolvimento do Trabalho de Conclusão de Curso em Geografia na UFMG e articula produção acadêmica e prática de geoprocessamento municipal.</p></div>
+<div class="grid">
+<div class="card"><b>Autor</b>Bruno Eduardo Teixeira Peixoto</div>
+<div class="card"><b>Vínculo acadêmico</b>Curso de Geografia — Instituto de Geociências, UFMG</div>
+<div class="card"><b>Natureza do trabalho</b>Produto cartográfico e documental vinculado ao TCC em Geografia</div>
+<div class="card"><b>Orientação acadêmica</b>Prof. Dr. Fabio Soares Oliveira</div>
+<div class="card"><b>Coorientação acadêmica</b>Profa. Dra. Debora Lima</div>
+<div class="card"><b>Orientação técnica / departamental</b>Márcio de Avelino e Giovanni Chagas Egg</div>
+</div>
+</section>
+
+<section id="contexto" class="section">
+<div class="head"><div class="eyebrow">Seção 02</div><h2>Apresentação e contexto</h2></div>
+<div class="prose">
+<p>O projeto para o desenvolvimento de mapas escolares e outros produtos cartográficos escolares é concebido como parte de uma investigação mais ampla sobre cartografia escolar, geoprocessamento e leitura histórica do território de Nova Lima. A proposta aproxima fontes históricas, registros iconográficos e bases geoespaciais contemporâneas para representar caminhos de circulação, formação territorial, mineração, núcleos urbanos e elementos da paisagem mineira em diferentes períodos.</p>
+<p>A construção dos produtos combina tratamento de dados em ambiente SIG, consulta a fontes institucionais e bibliográficas e seleção de imagens históricas. Essa articulação permite que os mapas sejam utilizados tanto como produtos técnico-cartográficos quanto como recursos de interpretação histórica e geográfica, mantendo explícita a procedência de cada informação e imagem.</p>
+<p>No âmbito institucional, o projeto é desenvolvido no Instituto de Geociências da UFMG em parceria com o Departamento de Geoprocessamento da Secretaria Municipal de Política Urbana de Nova Lima. A cooperação aproxima a pesquisa acadêmica da infraestrutura municipal de dados geográficos e da produção de materiais voltados à compreensão do território de Nova Lima para fins pedagógicos.</p>
+</div>
+</section>
+
+<section id="creditos" class="section">
+<div class="head"><div class="eyebrow">Seção 03</div><h2>Créditos institucionais</h2></div>
+<div class="callout"><strong>Autoria e elaboração cartográfica:</strong> Bruno Eduardo Teixeira Peixoto. <strong>Vínculo acadêmico:</strong> Instituto de Geociências da Universidade Federal de Minas Gerais — IGC/UFMG. <strong>Orientação:</strong> Prof. Dr. Fabio Soares Oliveira. <strong>Coorientação:</strong> Profa. Dra. Debora Lima. <strong>Orientação técnica no DPGEO:</strong> Márcio de Avelino e Giovanni Chagas Egg. <strong>Parceria institucional:</strong> IGC/UFMG e Departamento de Geoprocessamento da Secretaria Municipal de Política Urbana de Nova Lima — DPGEO/SEMPU, Prefeitura Municipal de Nova Lima.</div>
+</section>
+
+<section id="historicas" class="section">
+<div class="head"><div class="eyebrow">Seção 04</div><h2>Referências históricas e documentais</h2></div>
+<div class="refs">
+<div class="ref"><strong>ALMEIDA, Anaeli Queren Xavier.</strong> Caminho e poder: uma análise arqueológica do Caminho Novo em Minas Gerais. Século XVIII. <em>Vestígios — Revista Latino-Americana de Arqueologia Histórica</em>, Belo Horizonte, v. 9, n. 2, p. 109-142, 2015. DOI: 10.31239/vtg.v9i2.10574. <a href="https://periodicos.ufmg.br/index.php/vestigios/article/view/11819" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>BRASIL.</strong> Lei nº 14.698, de 19 de outubro de 2023. Erige em monumento nacional o Caminho da Estrada Real. Brasília, DF: Presidência da República, 2023. <a href="https://planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14698.htm" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>COSTA, Antônio Gilberto et al.</strong> <em>Cartografia das Minas Gerais: da Capitania à Província.</em> Belo Horizonte: Editora UFMG, 2002. 84 p.</div>
+<div class="ref"><strong>COSTA, Antônio Gilberto (org.).</strong> <em>Os caminhos do ouro e a Estrada Real.</em> Belo Horizonte: Editora UFMG; Lisboa: Kapa Editorial, 2005. 244 p.</div>
+<div class="ref"><strong>INSTITUTO ESTRADA REAL.</strong> Caminho do Sabarabuçu: roteiros planilhados e arquivos georreferenciados. Belo Horizonte: Sistema FIEMG, [s.d.]. <a href="https://institutoestradareal.com.br/roteiros-planilhados/caminho-do-sabarabucu/" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>MINAS GERAIS. Governo do Estado.</strong> História de Minas Gerais. Belo Horizonte, [s.d.]. <a href="https://www.mg.gov.br/pagina/historia" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>PIMENTA, Dermeval José.</strong> <em>Caminhos de Minas Gerais.</em> Belo Horizonte: Imprensa Oficial, 1971. 178 p.</div>
+<div class="ref"><strong>ROCHA, José Joaquim da.</strong> <em>Geografia histórica da Capitania de Minas Gerais.</em> Estudo crítico, transcrição e colação de textos de Maria Efigênia Lage de Resende e Rita de Cássia Marques. Belo Horizonte: Fundação João Pinheiro, 1995. 228 p.</div>
+</div>
+</section>
+
+<section id="cartograficas" class="section">
+<div class="head"><div class="eyebrow">Seção 05</div><h2>Referências geográficas e cartográficas</h2></div>
+<div class="prose"><p>As bases geoespaciais foram utilizadas como suporte para os traçados da Estrada Real, limites municipais, contexto metropolitano, hidrografia, geologia, cobertura e uso da terra e dados municipais. Recortes, conversões, seleções espaciais e edições de feições são tratados como procedimentos realizados pelo autor em ambiente SIG.</p></div>
+<div class="refs">
+<div class="ref"><strong>AGÊNCIA DE DESENVOLVIMENTO DA REGIÃO METROPOLITANA DE BELO HORIZONTE.</strong> PDDI-Macrozoneamento: arquivos de consulta e dados geoespaciais da Região Metropolitana de Belo Horizonte. Belo Horizonte, [s.d.]. <a href="https://www.agenciarmbh.mg.gov.br/pddi-macrozoneamento/" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>IBGE — INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA.</strong> Malhas territoriais: Malha Municipal. Rio de Janeiro: IBGE, [s.d.]. <a href="https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>INSTITUTO ESTRADA REAL.</strong> Roteiros planilhados e arquivos georreferenciados da Estrada Real. Belo Horizonte: Sistema FIEMG, [s.d.]. <a href="https://institutoestradareal.com.br/roteiros-planilhados/" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>MINAS GERAIS. SISEMA.</strong> Infraestrutura de Dados Espaciais do SISEMA — IDE-Sisema: geovisualizador e dados geoespaciais. Belo Horizonte, [s.d.]. <a href="https://visualizador.idesisema.meioambiente.mg.gov.br/" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>NOVA LIMA (MG). Prefeitura Municipal. Departamento de Geoprocessamento — DPGEO/SEMPU.</strong> Base cartográfica municipal, dados internos e tratamentos geoespaciais utilizados no projeto Estrada Real e Nova Lima. Nova Lima, 2026. Dados institucionais de trabalho.</div>
+<div class="ref"><strong>PROJETO MAPBIOMAS.</strong> Coleção 9 da Série Anual de Mapas de Cobertura e Uso da Terra do Brasil: 1985-2023. São Paulo: MapBiomas, 2024. DOI: 10.58053/MapBiomas/XXUKA8. <a href="https://brasil.mapbiomas.org/" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+<div class="ref"><strong>SILVA, Márcio Antônio da et al.</strong> Mapa geológico do estado de Minas Gerais. Belo Horizonte: CPRM, 2020. 1 mapa, color., escala 1:1.000.000. Inclui dados vetoriais SIG. <a href="https://rigeo.sgb.gov.br/handle/doc/21828" target="_blank" rel="noopener">Disponível em</a>. Acesso em: 20 out. 2026.</div>
+</div>
+<div class="callout"><strong>Nota recomendada para o mapa:</strong> Instituto Estrada Real/Sistema FIEMG — traçados da Estrada Real; IBGE — malha municipal; IDE-Sisema/IGAM — hidrografia e dados ambientais; MapBiomas — cobertura e uso da terra; SGB/CPRM — geologia; Agência RMBH — contexto metropolitano; Prefeitura Municipal de Nova Lima/DPGEO — bases e dados municipais. Tratamento, recorte, conversão e composição cartográfica: Bruno Eduardo Teixeira Peixoto, 2026.</div>
+</section>
+
+<section id="iconografia" class="section">
+<div class="head"><div class="eyebrow">Seção 06</div><h2>Fontes iconográficas</h2></div>
+<div class="prose"><p>As imagens abaixo integram o conjunto de referências visuais do projeto. Sempre que possível, a identificação privilegia autoria, título, data e acervo da obra original, mantendo o endereço eletrônico utilizado no processo de seleção.</p></div>
+<div class="gallery">
+<article class="art"><img loading="lazy" src="https://www.brasilianaiconografica.art.br/obras/18335/lavage-du-minerai-d-or-pres-de-la-montagne-itacolumi" alt="Lavagem do minério de ouro junto ao Itacolomi" onerror="this.style.display='none'"><div class="body"><h3>Lavagem do minério de ouro junto ao Itacolomi</h3><p>RUGENDAS, Johann Moritz. 1835. Litografia colorida à mão. Coleção Brasiliana Itaú, Itaú Cultural.</p><a href="https://www.brasilianaiconografica.art.br/obras/18335/lavage-du-minerai-d-or-pres-de-la-montagne-itacolumi" target="_blank" rel="noopener">Brasiliana Iconográfica</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Oscar_Pereira_da_Silva_-_Bandeirantes_%C3%A0_Caminho_das_Minas%2C_Acervo_do_Museu_Paulista_da_USP.jpg" alt="Bandeirantes a caminho das Minas"><div class="body"><h3>Bandeirantes a caminho das Minas</h3><p>SILVA, Oscar Pereira da. 1920. Óleo sobre tela. Museu Paulista da USP.</p><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons / Museu Paulista</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Map_of_the_Region_of_Minas_Gerais_with_a_Part_of_the_Way_from_S%C3%A3o_Paulo_and_of_Rio_de_Janeiro_to_the_Mines%2C_Showing_Tributaries_of_the_S%C3%A3o_Francisco_River_WDL954.jpg" alt="Mapa da região das Minas Gerais e dos caminhos para as minas"><div class="body"><h3>Mapa da região das Minas Gerais e dos caminhos para as minas</h3><p>Autoria não identificada. [1700–1799]. Biblioteca Nacional do Brasil.</p><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons / Library of Congress / Biblioteca Nacional</a></div></article>
+<article class="art"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mapa_das_Minas_de_Ouro_em_S%C3%A3o_Paulo_e_Costas_do_Mar_que_Lhe_Pertence_-_1%2C_Acervo_do_Museu_Paulista_da_USP.jpg" alt="Mapa das Minas de Ouro em São Paulo e Costas do Mar"><div class="body"><h3>Mapa das Minas de Ouro em São Paulo e Costas do Mar</h3><p>BASTO, F. 1714. Coleção João Baptista de Campos Aguirra, Museu Paulista da USP.</p><a href="https://commons.wikimedia.org/wiki/File%3AMapa_das_Minas_de_Ouro_em_S%C3%A3o_Paulo_e_Costas_do_Mar_que_Lhe_Pertence_-_1%2C_Acervo_do_Museu_Paulista_da_USP.jpg" target="_blank" rel="noopener">Wikimedia Commons / Museu Paulista</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Johann_Moritz_Rugendas_Ouro_Preto_1824.jpg" alt="Ouro Preto, de Rugendas"><div class="body"><h3>Ouro Preto</h3><p>RUGENDAS, Johann Moritz. 1824. Imagem histórica.</p><a href="https://commons.wikimedia.org/wiki/File%3AJohann_Moritz_Rugendas_Ouro_Preto_1824.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Xd8w88sxkhwz.jpg" alt="Vila Rica, de Arnaud Julien Pallière"><div class="body"><h3>Vila Rica</h3><p>PALLIÈRE, Arnaud Julien. 1820. Óleo sobre tela. Museu da Inconfidência, Ouro Preto.</p><a href="https://upload.wikimedia.org/wikipedia/commons/2/2d/Xd8w88sxkhwz.jpg" target="_blank" rel="noopener">Wikimedia Commons / Museu da Inconfidência</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Rugendas_-_Barbacena_Caminho_para_as_Minas.jpg" alt="Barbacena, caminho para as Minas Gerais"><div class="body"><h3>Barbacena, caminho para as Minas Gerais</h3><p>RUGENDAS, Johann Moritz. c. 1820–1821.</p><a href="https://commons.wikimedia.org/wiki/File%3ARugendas_-_Barbacena_Caminho_para_as_Minas.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Johann_Moritz_Rugendas_-_Tropeiros.jpg" alt="Tropeiros, de Rugendas"><div class="body"><h3>Tropeiros</h3><p>RUGENDAS, Johann Moritz. Século XIX. Palácio Itamaraty, Brasília.</p><a href="https://upload.wikimedia.org/wikipedia/commons/a/a9/Johann_Moritz_Rugendas_-_Tropeiros.jpg" target="_blank" rel="noopener">Wikimedia Commons / Palácio Itamaraty</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/S._John_Del_Rey_Mining_Company-_Morro_Velho_WDL2000.png" alt="Saint John d'El Rey Mining Company, Morro Velho"><div class="body"><h3>Saint John d’El Rey Mining Company — Morro Velho</h3><p>RIEDEL, Augusto. 1868–1869. Coleção Thereza Christina Maria, Biblioteca Nacional do Brasil.</p><a href="https://upload.wikimedia.org/wikipedia/commons/e/e1/S._John_Del_Rey_Mining_Company-_Morro_Velho_WDL2000.png" target="_blank" rel="noopener">Wikimedia Commons / Library of Congress / Biblioteca Nacional</a></div></article>
+<article class="art"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Sabara_by_Rugendas.jpg" alt="Sabará, por Rugendas"><div class="body"><h3>Sabará</h3><p>RUGENDAS, Johann Moritz. c. 1845. Imagem da cidade de Sabará.</p><a href="https://upload.wikimedia.org/wikipedia/commons/0/07/Sabara_by_Rugendas.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div></article>
+</div>
+</section>
+
+<section id="acervos" class="section">
+<div class="head"><div class="eyebrow">Seção 07</div><h2>Acervos históricos e créditos complementares</h2></div>
+<div class="twocol">
+<div class="ref"><strong>Saint John d’El Rey Mining Company Records — University of Texas at Austin.</strong><p>O projeto utiliza e prevê a incorporação de documentação histórica conservada na Nettie Lee Benson Latin American Collection, reunindo correspondência, relatórios, atas, registros financeiros, fotografias, mapas, plantas e outros documentos sobre a companhia e sua atuação em Minas Gerais.</p><p><strong>THE UNIVERSITY OF TEXAS AT AUSTIN.</strong> Nettie Lee Benson Latin American Collection. <em>Saint John d'El Rey Mining Company Records, 1830–1985.</em> Collection identifier 1984-12. Austin: University of Texas Libraries, [s.d.].</p><a href="https://archives.lib.utexas.edu/repositories/4/resources/1011" target="_blank" rel="noopener">Acessar o acervo</a><p><strong>Crédito recomendado:</strong> Saint John d'El Rey Mining Company Records, Nettie Lee Benson Latin American Collection, University of Texas Libraries, The University of Texas at Austin.</p></div>
+<div class="ref"><strong>Celso Gomes Travassos.</strong><p>O arquivo-base registra o nome “Celso Travassos” como crédito complementar, mas não associa esse nome a uma imagem, data, título ou URL específicos. Por essa razão, a referência individual deverá ser completada quando a fotografia correspondente for identificada.</p><p><strong>TRAVASSOS, Celso Gomes.</strong> [Fotografia/acervo a identificar no produto final]. Nova Lima, [s.d.]. Crédito informado no arquivo-base do projeto.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="head"><div class="eyebrow">Seção 08</div><h2>Direitos de uso e reprodução</h2></div>
+<div class="prose"><p>A presença de uma imagem neste levantamento bibliográfico não substitui a verificação das condições de uso impostas pelo acervo ou plataforma de origem. Diversas obras históricas listadas estão em domínio público, mas reproduções digitais, metadados e condições de atribuição podem possuir regras próprias. Antes da publicação do mapa, Atlas Escolar, painéis, materiais didáticos ou versões on-line, recomenda-se conferir a página de origem e manter visíveis os créditos de autoria, acervo e instituição.</p></div>
+</section>
+
+<section id="ficha" class="section">
+<div class="head"><div class="eyebrow">Seção 09</div><h2>Ficha técnica final</h2></div>
+<div class="tech"><dl>
+<dt>Projeto cartográfico</dt><dd>Estrada Real e Nova Lima</dd>
+<dt>Autoria e elaboração</dt><dd>Bruno Eduardo Teixeira Peixoto</dd>
+<dt>Vínculo</dt><dd>Curso de Geografia — Instituto de Geociências, Universidade Federal de Minas Gerais (IGC/UFMG)</dd>
+<dt>Orientação acadêmica</dt><dd>Prof. Dr. Fabio Soares Oliveira</dd>
+<dt>Coorientação acadêmica</dt><dd>Profa. Dra. Debora Lima</dd>
+<dt>Orientação técnica/departamental</dt><dd>Márcio de Avelino e Giovanni Chagas Egg</dd>
+<dt>Parceria institucional</dt><dd>Instituto de Geociências da UFMG e Departamento de Geoprocessamento da Secretaria Municipal de Política Urbana de Nova Lima — DPGEO/SEMPU, Prefeitura Municipal de Nova Lima</dd>
+<dt>Fontes</dt><dd>Conforme as referências históricas, geográficas, cartográficas, iconográficas e arquivísticas discriminadas nesta página</dd>
+<dt>Ano</dt><dd>2026</dd>
+</dl></div>
+</section>
+</main>
+
+<footer><div class="foot"><span>Produto vinculado ao TCC em Geografia — IGC/UFMG</span><span>DPGEO/SEMPU — Prefeitura Municipal de Nova Lima • 2026</span></div></footer>
+</body>
+</html>
